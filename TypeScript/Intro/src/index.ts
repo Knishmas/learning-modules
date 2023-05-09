@@ -258,3 +258,39 @@ function greet(name: string | null | undefined){
 }
 
 greet(null);
+
+//-------------------------------------------------
+/* Option chaining
+When working with nullable objects we often have to do null checks 
+*/ 
+
+type Customer = {
+    birthday: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined{
+    return id === 0 ? null : {birthday: new Date() };
+}
+
+let customer = getCustomer(0);
+//Have to insert this check because we will get an error that customer could possibly be null or undefined
+if(customer !== null && customer != undefined)
+    console.log(customer.birthday);
+
+/*There's an easier way to achieve this using optional property access operator
+we'd remove the if statement and simply add this to the console.log 
+
+    console.log(customer?.birthday);
+*/ 
+
+/*Optional element access operator: Useful when dealing with arrays 
+Note: if we can to access this element in the array we'd have to have those null and undefined checks as well
+ if(customers != null && customers !== undefined)
+    customer[0]
+    OR we could do: customers?.[0]
+*/
+
+//Optional call 
+let log: any  = null;
+//execute only if log is referencing an actual function otherwise we'd get undefined.
+log?.('a')
