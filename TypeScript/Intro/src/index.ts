@@ -233,3 +233,28 @@ let textBox: UIWidget = {
     drag: () => {}, 
     resize: () => {}
     }
+
+    
+//-------------------------------------------------
+/* Literal Types 
+Note: Limit values we can assign to variables
+Literal (exact, specific)
+*/
+type Quantity = 50 | 100; 
+
+let quantity: Quantity= 100; 
+
+//-------------------------------------------------
+/* Nullable Types 
+Note: By default the TypeScript compiler prevents us from using undefined or Null values
+Note: have to use union types if we want funcs in TypeScript to use null or undefined.
+*/
+function greet(name: string | null | undefined){
+    if(name)
+        console.log(name.toUpperCase);
+    else 
+        console.log('Tests');
+        
+}
+
+greet(null);
