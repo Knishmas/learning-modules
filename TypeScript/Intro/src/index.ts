@@ -196,3 +196,20 @@ let employee:  {
         }
     }
 */ 
+
+//-------------------------------------------------
+/* Union Types 
+Note: Using union types we're able to give a variable or a function parameter more than 1 type
+
+*/
+
+function kgToLbs(weight: number | string){
+    //Narrowing
+    if(typeof weight === 'number')
+        return weight * 2.2;
+    else 
+        return parseInt(weight) * 2.2;
+}
+
+kgToLbs(10); 
+kgToLbs('10kg');
