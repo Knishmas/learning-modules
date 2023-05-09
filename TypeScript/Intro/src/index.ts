@@ -156,3 +156,43 @@ Note: Need to specify types:
      }
     }
 */
+//-------------------------------------------------
+
+/* Advance Types 
+
+
+Type Aliases: we can define our own custom types 
+
+In the example above with the object we would have to repeat the code everytime to create an object, 
+but with type aliases we're able to create our own defined structures that are able to be re-used 
+*/
+
+type Employee = {
+    readonly id: number, 
+    name: string,
+    retire: (date: Date) => void
+}
+
+/*
+let employee:  { 
+    id: number, 
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+     name: 'Mosh'
+     retire: (date: Date) => {
+        console.log(date);
+     }
+    }
+
+    With our defined Employee type alias this becomes: 
+
+    let employee: Employee = {
+        id: 1, 
+        name: 'Mosh', 
+        retire: (date: Date) => {
+            console.log(date);
+        }
+    }
+*/ 
