@@ -98,3 +98,26 @@ const enum Size{Small = 1, Medium = 2, Large};
 let mySize: Size = Size.Medium;
 console.log(mySize);
 
+//-------------------------------------------------
+/*Functions
+Explicitly decalring parameter type and return type 
+*/
+function calculateTax(income: number, taxYear: number): number  {
+    if(taxYear < 2022)
+        return income * 1.2; 
+    return income * 1.3;
+}
+//Typescript is stric about the # of parameters. In this case you must have 2 nore more and no less. 
+calculateTax(10_000, 2022)
+
+//
+/*
+We don't have to supply both parameters, we can set taxYear as default
+
+function calculateTax(income: number, taxYear = 2022): number  {
+    if(taxYear < 2022)
+        return income * 1.2; 
+    return income * 1.3;
+}
+calculateTax(10_000)
+*/
