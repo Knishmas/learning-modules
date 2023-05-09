@@ -121,3 +121,38 @@ function calculateTax(income: number, taxYear = 2022): number  {
 }
 calculateTax(10_000)
 */
+
+//-------------------------------------------------
+/* Objects 
+Regular js allows for objects to be dynamic, but in typescript this isn't the case. 
+    let employee = { id: 1 }
+    employee.name = 'Mosh';
+*/
+
+let employee:  { 
+    id: number, 
+    name: string
+} = {id: 1, name: 'Mosh'}
+
+/* Sometimes we want to make certain properties in our object read only so that we don't 
+accidently change them. Here's how we can make id read only by modifying the code above: 
+    let employee:  { 
+    readonly id: number, 
+    name: string
+} = {id: 1, name: 'Mosh'}
+*/
+
+/* Defining a method within an object
+Note: Need to specify types: 
+    let employee:  { 
+    id: number, 
+    name: string,
+    retire: (date: Date) => void
+} = {
+    id: 1,
+     name: 'Mosh'
+     retire: (date: Date) => {
+        console.log(date);
+     }
+    }
+*/
