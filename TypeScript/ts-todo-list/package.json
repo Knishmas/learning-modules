@@ -1,0 +1,16 @@
+{
+  "name": "ts-todo-list",
+  "version": "1.0.0",
+  "description": "First TypeScript beginner project. To do list based off of Web Dev Simplifieds tutorial: https://www.youtube.com/watch?v=jBmrduvKl5w&ab_channel=WebDevSimplified",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
