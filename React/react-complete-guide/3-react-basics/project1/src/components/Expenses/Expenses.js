@@ -1,7 +1,7 @@
 import React from 'react'
 import { ExpenseItem } from './ExpenseItem'
-import './Styles/Expenses.css'
-import Card from './Card';
+import '../Styles/Expenses.css'
+import Card from '../Card';
 
 const Expenses = (props) => {
     const expenses = [

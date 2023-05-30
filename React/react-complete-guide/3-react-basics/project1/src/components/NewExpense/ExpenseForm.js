@@ -1,5 +1,5 @@
 import React from 'react'
-import './Styles/ExpenseForm.css'
+import '../Styles/ExpenseForm.css'
 
 const ExpenseForm = () => {
   return (
