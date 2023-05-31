@@ -4,9 +4,8 @@ function App() {
 
   return (
     <div>
-
-      <Expenses/>
       <NewExpense/>
+      <Expenses/>
     </div>
   );
 }
